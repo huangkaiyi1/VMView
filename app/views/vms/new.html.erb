@@ -1,4 +1,4 @@
-<%= form_for(@virtual_machine) do |vm| %>
+<%= form_for(@vm, url: create_vm_path) do |vm| %>
   <p>
     <%= vm.label :hostname %><br/>
     <%= vm.text_field :hostname %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
 	root "vms#index"
-	# resources :virtual_machines
+	resources :vms, :except => ['create']
+	post 'vms/create' => 'vms#create', as: "create_vm"
 end
