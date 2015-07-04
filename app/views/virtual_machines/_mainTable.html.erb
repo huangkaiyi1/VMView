@@ -1,0 +1,32 @@
+
+<div class="container">
+	<div class="row">
+		<div class="table-responsive">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th> Hostname </th>
+						<th> CPUs </th>
+						<th> Ram (MB) </th>
+						<th> Environment ID </th>
+					</tr>
+				</thead>
+				<tbody id="myTable">
+					<% @vms.each do |vms| %>
+					<tr>
+						<td>1</td>
+						<td><%= vms.hostname %></td>
+						<td><%= vms.number_cpu %></td>
+						<td><%= vms.ram_mb %></td>
+						<td><%= vms.environment_id %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-12 text-center">
+			<ul class="pagination pagination-lg pager" id="myPager"></ul>
+		</div>
+	</div>
+</div>
