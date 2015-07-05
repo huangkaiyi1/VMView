@@ -1,4 +1,4 @@
 <%= render 'header' %>
-<%= render 'createVMDialog' %>
+<%= link_to "+Add VM", new_virtual_machine_path, remote: true, class: "btn btn-primary" %>
 <%= render 'mainTable' %>
-<%= link_to("KATYUSHA", new_virtual_machine_path) %>
+<div id="createVMModal" class="modal fade" role="dialog"></div>
