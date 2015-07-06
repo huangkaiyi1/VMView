@@ -1,5 +1,4 @@
 class VirtualMachinesController < ApplicationController
-  respond_to :html, :js
   
   def index
     @vms = VirtualMachine.all
@@ -12,6 +11,16 @@ class VirtualMachinesController < ApplicationController
 
   def new
     @vm = VirtualMachine.new
+  end
+  
+  def destroy
+    @vms = VirtualMachine.all
+    @vm = VirtualMachine.find(params[:id])
+    @vm.destroy
+  end
+  
+  def delete
+    @vm = VirtualMachine.find(params[:virtual_machine_id])
   end
 
   private

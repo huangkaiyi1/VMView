@@ -22,6 +22,8 @@ $.fn.pageMe = function(opts){
     
     var numItems = children.size();
     var numPages = Math.ceil(numItems/perPage);
+    if( numPages == 0 )
+    	numPages = 1;
 
     pager.data("curr",0);
     
@@ -102,6 +104,6 @@ $.fn.pageMe = function(opts){
 
 $(document).ready(function(){
     
-  $('#myTable').pageMe({pagerSelector:'#myPager',showPrevNext:true,hidePageNumbers:false,perPage:4});
+  $('#vmTable').pageMe({pagerSelector:'#vmPager',showPrevNext:true,hidePageNumbers:false,perPage:8});
     
 });

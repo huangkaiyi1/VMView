@@ -1,4 +1,4 @@
-<%= form_for(@vm) do |vm| %>
+<%= form_for @vm, remote: true do |vm| %>
 <p>
 	<%= vm.label :hostname %>
 	<br/>

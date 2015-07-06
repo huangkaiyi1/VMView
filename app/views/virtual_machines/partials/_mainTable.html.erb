@@ -10,23 +10,16 @@
 						<th> CPUs </th>
 						<th> Ram (MB) </th>
 						<th> Environment ID </th>
+						<td>&nbsp;</td>
 					</tr>
 				</thead>
-				<tbody id="myTable">
-					<% @vms.each do |vms| %>
-					<tr>
-						<td>1</td>
-						<td><%= vms.hostname %></td>
-						<td><%= vms.number_cpu %></td>
-						<td><%= vms.ram_mb %></td>
-						<td><%= vms.environment_id %></td>
-					</tr>
-					<% end %>
+				<tbody id="vmTable">
+      				<%= render partial: "virtual_machines/partials/tableRows" %>
 				</tbody>
 			</table>
 		</div>
 		<div class="col-md-12 text-center">
-			<ul class="pagination pagination-lg pager" id="myPager"></ul>
+			<ul class="pagination pagination-lg pager" id="vmPager"></ul>
 		</div>
 	</div>
 </div>

@@ -1,4 +1,4 @@
-<%= render 'header' %>
+<%= render partial: 'virtual_machines/partials/header' %>
 <%= link_to "+Add VM", new_virtual_machine_path, remote: true, class: "btn btn-primary" %>
-<%= render 'mainTable' %>
+<%= render partial: 'virtual_machines/partials/mainTable' %>
 <div id="createVMModal" class="modal fade" role="dialog"></div>

@@ -1,2 +1,2 @@
-$("#createVMModal").html("<%= escape_javascript(render 'new') %>")
+$("#createVMModal").html("<%= escape_javascript(render partial: 'virtual_machines/partials/new') %>")
 $("#createVMModal").modal("show")

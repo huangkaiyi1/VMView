@@ -1,0 +1,10 @@
+<% @vms.each do |vm| %>
+<tr>
+	<td>1</td>
+	<td><%= vm.hostname %></td>
+	<td><%= vm.number_cpu %></td>
+	<td><%= vm.ram_mb %></td>
+	<td><%= vm.environment_id %></td>
+	<td><%= link_to "", virtual_machine_delete_path(vm), remote: true, class: "glyphicon glyphicon-edit" %></td>
+</tr>
+<% end %>
